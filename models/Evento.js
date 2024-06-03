@@ -21,6 +21,9 @@ const EventoSchema = Schema({
     ref: "Usuario",
     required: true,
   },
+  notas: {
+    type: String
+  }
 });
 
 EventoSchema.method('toJSON', function(){
