@@ -1,9 +1,10 @@
 
 const mongoose = require("mongoose");
+//"mongodb://127.0.0.1:27017/Calendario"
 
 const dbConnection = async () => {
   try {
-    await mongoose.connect("mongodb://127.0.0.1:27017/Calendario", {
+    await mongoose.connect(process.env.CONECCION_MOONGOSE, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });
